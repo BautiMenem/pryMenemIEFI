@@ -57,7 +57,7 @@ namespace pryMenemIEFI
         {
             //string conexion y query sql
             string conexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=EL_CLUB.accdb;Persist Security Info=False;";
-            string sql = "SELECT DISTINCT Pais from Tabla1";
+            string sql = "SELECT DISTINCT Pais from PAISES";
 
 
 
@@ -92,7 +92,7 @@ namespace pryMenemIEFI
         {
             //string conexion y query sql
             string conexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=EL_CLUB.accdb;Persist Security Info=False";
-            string consultaSql = "INSERT INTO Tabla1 (Pais) VALUES (@Pais)";
+            string consultaSql = "INSERT INTO PAISES (Pais) VALUES (@Pais)";
 
             try
             {
@@ -105,7 +105,7 @@ namespace pryMenemIEFI
 
 
                 // verificar si el pais ya existe en la tabla
-                string verificacionSql = "SELECT COUNT(*) FROM Tabla1 WHERE Pais = @Pais";
+                string verificacionSql = "SELECT COUNT(*) FROM PAISES WHERE Pais = @Pais";
                 Comando.CommandText = verificacionSql;
                 Comando.Parameters.AddWithValue("@Pais", Pais);
                 int count = (int)Comando.ExecuteScalar();

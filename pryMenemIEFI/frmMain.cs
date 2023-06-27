@@ -54,7 +54,7 @@ namespace pryMenemIEFI
             //llamo el objeto de la clase conexion para escribir un nuevo socio en la base de datos
             ClsConexion obj = new ClsConexion();
             obj.RegistrarSocio(txtNombre.Text, txtApellido.Text, cmbLugar.Text, Convert.ToInt32(txtEdad.Text), sexo, Convert.ToDecimal(txtIngreso.Text), Convert.ToInt32(txtPuntaje.Text));
-           
+            Limpiar();
 
 
         }
@@ -106,7 +106,10 @@ namespace pryMenemIEFI
             if (txtNombre.Text != "" && txtNombre.Text != null)
             {
                 txtApellido.Enabled = true;
+                btnLimpiar.Enabled = true;
             }
+
+           
         }
 
         private void txtApellido_TextChanged(object sender, EventArgs e)
@@ -138,6 +141,35 @@ namespace pryMenemIEFI
             this.Hide();
             frmLugar frm = new frmLugar();
             frm.ShowDialog();
+        }
+
+        private void btnSugerencia_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show( " Si Su Pais No Aparece En La Lista, Por Favor Agreguelo En El Apartado ``Agregar Lugar´´.", "Sugerencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtApellido.Enabled = false;
+            cmbLugar.SelectedIndex = -1;
+            cmbLugar.Enabled = false;
+            txtEdad.Clear();
+            txtEdad.Enabled = false;           
+            rbMasculino.Checked = false;
+            rbFemenino.Checked = false;
+            mrcSexo.Enabled = false;
+            txtIngreso.Enabled = false;
+            txtIngreso.Clear();
+            txtPuntaje.Enabled = false;
+            txtPuntaje.Clear();
+            btnRegistrar.Enabled = false;
         }
     }
 }

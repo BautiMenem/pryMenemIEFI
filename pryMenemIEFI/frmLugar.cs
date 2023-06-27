@@ -25,7 +25,7 @@ namespace pryMenemIEFI
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ClsConexion cls = new ClsConexion();
-            cls.RegistrarPais(txtPais.Text);
+            cls.RegistrarLugar(txtPais.Text);
 
            
             txtPais.Clear();

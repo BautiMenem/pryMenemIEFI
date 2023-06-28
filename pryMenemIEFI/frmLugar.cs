@@ -25,10 +25,10 @@ namespace pryMenemIEFI
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ClsConexion cls = new ClsConexion();
-            cls.RegistrarLugar(txtPais.Text);
+            cls.RegistrarLugar(txtLugar.Text);
 
            
-            txtPais.Clear();
+            txtLugar.Clear();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

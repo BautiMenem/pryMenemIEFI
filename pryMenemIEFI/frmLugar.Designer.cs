@@ -33,7 +33,7 @@
             this.lblLugar = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.txtPais = new System.Windows.Forms.TextBox();
+            this.txtLugar = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblCargar
@@ -82,12 +82,12 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // txtPais
+            // txtLugar
             // 
-            this.txtPais.Location = new System.Drawing.Point(126, 69);
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(139, 20);
-            this.txtPais.TabIndex = 5;
+            this.txtLugar.Location = new System.Drawing.Point(126, 69);
+            this.txtLugar.Name = "txtLugar";
+            this.txtLugar.Size = new System.Drawing.Size(139, 20);
+            this.txtLugar.TabIndex = 5;
             // 
             // frmLugar
             // 
@@ -95,7 +95,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(277, 153);
-            this.Controls.Add(this.txtPais);
+            this.Controls.Add(this.txtLugar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblLugar);
@@ -118,6 +118,6 @@
         private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.TextBox txtPais;
+        private System.Windows.Forms.TextBox txtLugar;
     }
 }
